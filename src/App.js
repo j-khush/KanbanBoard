@@ -65,7 +65,7 @@ function App() {
   };
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <div className="App">
         <header className="App-header">
           <button className="display-button" onClick={handleDisplayClick}>
