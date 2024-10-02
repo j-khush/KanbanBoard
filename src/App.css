@@ -1,38 +1,146 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  text-align: left;
+  padding: 20px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.display-button {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.display-button img {
+  margin-right: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.options-dropdown {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.kanban-board {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.kanban-column {
+  min-width: 300px;
+  background-color: #f4f5f8;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.kanban-column h3 {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.column-icon, .user-avatar {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.ticket-count {
+  margin-left: auto;
+  background-color: #e8e8e8;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.ticket-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.ticket-id {
+  color: #6b6f76;
+  font-size: 12px;
+}
+
+.ticket-title {
+  font-size: 14px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.status-icon, .priority-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.ticket-footer {
+  display: flex;
+  align-items: center;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  background-color: #e8e8e8;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.tag-icon {
+  color: #6b6f76;
+  margin-right: 4px;
+}
+
+.group-by-selector, .sort-by-selector {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .kanban-column {
+    width: 100%;
   }
+}
+
+.column-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.kanban-column h3 {
+  display: flex;
+  align-items: center;
 }
