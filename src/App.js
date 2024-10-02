@@ -4,7 +4,7 @@ import { fetchTickets } from './apiService';
 import GroupBySelector from './components/GroupBySelector';
 import SortBySelector from './components/SortBySelector';
 import './App.css';
-import { HashRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   const [tickets, setTickets] = useState([]);

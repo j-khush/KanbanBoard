@@ -26,7 +26,7 @@ function KanbanColumn({ title, icon, tickets = [], groupBy }) {
       <h3>
         {groupBy === 'priority' && priorityIcon && (
           <img 
-            src={process.env.PUBLIC_URL + priorityIcon}
+            src={priorityIcon}
             alt={title} 
             className="column-icon" 
             onError={(e) => {
@@ -37,7 +37,7 @@ function KanbanColumn({ title, icon, tickets = [], groupBy }) {
         )}
         {groupBy !== 'priority' && icon && (
           <img 
-            src={process.env.PUBLIC_URL + icon}
+            src={priorityIcon}
             alt={title} 
             className="column-icon" 
             onError={(e) => {
